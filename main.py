@@ -22,7 +22,8 @@ if text != "":
    text = text
 #If the above returns as False, we run the OCR library textract to #convert scanned/image based PDF files into text
 else:
-   text = textract.process(fileurl, method='tesseract', language='eng')
+   print ("textract not installing on pi")
+   #text = textract.process(fileurl, method='tesseract', language='eng')
 # Now we have a text variable which contains all the text derived #from our PDF file. Type print(text) to see what it contains. It #likely contains a lot of spaces, possibly junk such as '\n' etc.
 # Now, we will clean our text variable, and return it as a list of keywords.
 
